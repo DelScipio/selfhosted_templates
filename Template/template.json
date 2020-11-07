@@ -2050,7 +2050,15 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Deluge"
+        "bind": "/home/pi/config/deluge"
+      },
+      {
+        "container": "/Finish",
+        "bind": "/mnt/mHDD/Download/Finish"
+      },
+      {
+        "container": "/Incomplete",
+        "bind": "/mnt/mHDD/Download/Incomplete"
       },
       {
         "container": "/downloads",
@@ -2066,12 +2074,12 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       },
       {
         "name": "UMASK_SET",
         "label": "UMASK_SET",
-        "set": "000"
+        "set": "022"
       }
     ]
   },
@@ -2574,15 +2582,19 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Plex"
+        "bind": "/home/pi/config/plex"
       },
       {
-        "container": "/tv",
-        "bind": "/portainer/TV"
+        "container": "/Series",
+        "bind": "//mnt/gmedia/Media/Series"
       },
       {
-        "container": "/movies",
-        "bind": "/portainer/Movies"
+        "container": "/Movies 4k",
+        "bind": "//mnt/gmedia/Media/Movies 4k"
+      },
+      {
+        "container": "/Movies",
+        "bind": "/mnt/gmedia/Media/Movies"
       }
     ],
     "env": [
@@ -2594,7 +2606,7 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       },
       {
         "name": "VERSION",
@@ -2624,7 +2636,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/PlexRequests"
+        "bind": "/home/pi/config/PlexRequests"
       }
     ],
     "env": [
@@ -3315,11 +3327,11 @@
     "volumes": [
       {
         "container": "/logs",
-        "bind": "/portainer/Logs"
+        "bind": "/home/pi/config/tautulli/logs"
       },
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Tautulli"
+        "bind": "/home/pi/config/tautulli"
       }
     ],
     "env": [
@@ -3331,7 +3343,7 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       }
     ]
   },
