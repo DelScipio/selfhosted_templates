@@ -2897,7 +2897,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/nightly"
+        "bind": "/home/pi/config/radarr"
       },
       {
         "container": "/downloads",
