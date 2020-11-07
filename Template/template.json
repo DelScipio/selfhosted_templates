@@ -2884,7 +2884,7 @@
     "name": "radarr",
     "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
     "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/radarr.png",
-    "image": "linuxserver/radarr:latest",
+    "image": "linuxserver/radarr:nightly",
     "categories": [
       "Downloaders",
       "Video"
