@@ -109,15 +109,19 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Bazarr"
+        "bind": "/home/pi/config/bazarr"
       },
       {
-        "container": "/tv",
-        "bind": "/portainer/TV"
+        "container": "/series",
+        "bind": "/mnt/gmedia/Media/Series"
+      },
+      {
+        "container": "/movies 4k",
+        "bind": "/mnt/gmedia/Media/Movies 4k"
       },
       {
         "container": "/movies",
-        "bind": "/portainer/Movies"
+        "bind": "/mnt/gmedia/Media/Movies"
       }
     ],
     "env": [
@@ -129,11 +133,12 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       },
       {
         "name": "TZ",
-        "label": "TZ"
+        "label": "TZ",
+        "default": "Europe/Madrid"
       }
     ]
   },
@@ -471,11 +476,11 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Jackett"
+        "bind": "/home/pi/config/jackett"
       },
       {
         "container": "/downloads",
-        "bind": "/portainer/Downloads"
+        "bind": "/mnt/mHDD/Download"
       }
     ],
     "env": [
@@ -487,7 +492,7 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       }
     ]
   },
@@ -2880,15 +2885,19 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Radarr"
+        "bind": "/home/pi/config/radarr"
       },
       {
         "container": "/downloads",
-        "bind": "/portainer/Downloads"
+        "bind": "/mnt/mHDD/Download/Finish"
+      },
+      {
+        "container": "/movies 4k",
+        "bind": "/mnt/gmedia/Media/Movies 4k"
       },
       {
         "container": "/movies",
-        "bind": "/portainer/Movies"
+        "bind": "/mnt/gmedia/Media/Movies"
       }
     ],
     "env": [
@@ -2900,7 +2909,7 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       }
     ]
   },
@@ -3217,19 +3226,19 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Sonarr"
+        "bind": "/home/pi/config/sonarr"
       },
       {
         "container": "/dev/rtc",
         "bind": "/dev/rtc"
       },
       {
-        "container": "/tv",
-        "bind": "/portainer/TV"
+        "container": "/series",
+        "bind": "/mnt/gmedia/Media/Series"
       },
       {
         "container": "/downloads",
-        "bind": "/portainer/Downloads"
+        "bind": "/mnt/mHDD/Download/Finish"
       }
     ],
     "env": [
@@ -3241,7 +3250,7 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       }
     ]
   },
