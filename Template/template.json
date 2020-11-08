@@ -3009,11 +3009,11 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/ruTorrent"
+        "bind": "/home/pi/config/rutorrent"
       },
       {
         "container": "/downloads",
-        "bind": "/portainer/Downloads"
+        "bind": "/mnt/mHDD/Download"
       }
     ],
     "env": [
@@ -3025,7 +3025,7 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       }
     ]
   },
