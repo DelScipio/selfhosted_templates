@@ -1209,7 +1209,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Nginx"
+        "bind": "/home/pi/config/Nginx"
       }
     ],
     "env": [
@@ -1221,7 +1221,7 @@
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "100"
+        "default": "1000"
       }
     ]
   },
@@ -1239,14 +1239,14 @@
     "platform": "linux",
     "restart_policy": "unless-stopped",
     "ports": [
-      "80:8080/tcp",
-      "81:8181/tcp",
-      "443:4443/tcp"
+      "80:2080/tcp",
+      "81:2081/tcp",
+      "443:2443/tcp"
     ],
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Nginx-Proxy"
+        "bind": "/home/pi/config/Nginx-Proxy"
       }
     ]
   },
