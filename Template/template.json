@@ -2585,16 +2585,8 @@
         "bind": "/home/pi/docker/plex"
       },
       {
-        "container": "/series",
-        "bind": "//mnt/HDD/Media/series"
-      },
-      {
-        "container": "/movies 4k",
-        "bind": "//mnt/HDD/Media/movies 4k"
-      },
-      {
-        "container": "/movies",
-        "bind": "/mnt/HDD/Media/movies"
+        "container": "/media",
+        "bind": "/srv/TeraBicho/media"
       }
     ],
     "env": [
@@ -3013,11 +3005,11 @@
       },
       {
         "container": "/downloads",
-        "bind": "/mnt/HDD/Download"
+        "bind": "/srv/TeraBicho/downloads"
       },
       {
         "container": "/Media",
-        "bind": "/mnt/HDD/Media"
+        "bind": "/srv/TeraBicho/media"
       }
     ],
     "env": [
