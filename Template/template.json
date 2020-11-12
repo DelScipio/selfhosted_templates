@@ -109,7 +109,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/bazarr"
+        "bind": "/home/pi/docker/bazarr"
       },
       {
         "container": "/series",
@@ -476,7 +476,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/jackett"
+        "bind": "/home/pi/docker/jackett"
       },
       {
         "container": "/downloads",
@@ -1209,7 +1209,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/Nginx"
+        "bind": "/home/pi/docker/Nginx"
       }
     ],
     "env": [
@@ -1246,7 +1246,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/Nginx-Proxy"
+        "bind": "/home/pi/docker/Nginx-Proxy"
       }
     ]
   },
@@ -2050,7 +2050,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/deluge"
+        "bind": "/home/pi/docker/deluge"
       },
       {
         "container": "/Finish",
@@ -2582,19 +2582,19 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/plex"
+        "bind": "/home/pi/docker/plex"
       },
       {
-        "container": "/Series",
-        "bind": "//mnt/gmedia/Media/Series"
+        "container": "/series",
+        "bind": "//mnt/HDD/Media/series"
       },
       {
-        "container": "/Movies 4k",
-        "bind": "//mnt/gmedia/Media/Movies 4k"
+        "container": "/movies 4k",
+        "bind": "//mnt/HDD/Media/movies 4k"
       },
       {
-        "container": "/Movies",
-        "bind": "/mnt/gmedia/Media/Movies"
+        "container": "/movies",
+        "bind": "/mnt/HDD/Media/movies"
       }
     ],
     "env": [
@@ -2636,7 +2636,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/PlexRequests"
+        "bind": "/home/pi/docker/PlexRequests"
       }
     ],
     "env": [
@@ -2897,7 +2897,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/radarr"
+        "bind": "/home/pi/docker/radarr"
       },
       {
         "container": "/downloads",
@@ -3009,11 +3009,15 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/rutorrent"
+        "bind": "/home/pi/docker/rutorrent"
       },
       {
         "container": "/downloads",
-        "bind": "/mnt/mHDD/Download"
+        "bind": "/mnt/HDD/Download"
+      },
+      {
+        "container": "/Media",
+        "bind": "/mnt/HDD/Media"
       }
     ],
     "env": [
@@ -3238,7 +3242,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/home/pi/config/sonarr"
+        "bind": "/home/pi/docker/sonarr"
       },
       {
         "container": "/dev/rtc",
@@ -3327,11 +3331,11 @@
     "volumes": [
       {
         "container": "/logs",
-        "bind": "/home/pi/config/tautulli/logs"
+        "bind": "/home/pi/docker/tautulli/logs"
       },
       {
         "container": "/config",
-        "bind": "/home/pi/config/tautulli"
+        "bind": "/home/pi/docker/tautulli"
       }
     ],
     "env": [
